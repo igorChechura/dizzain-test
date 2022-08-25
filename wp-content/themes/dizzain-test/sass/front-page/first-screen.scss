@@ -1,0 +1,48 @@
+.first-screen {
+    min-height: 100vh;
+    padding: 90px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    @include lg {
+        padding: 70px 0;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 120px;
+        line-height: 126%;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 30px;
+
+        @include lg {
+            font-size: 80px;
+        }
+
+        @include md {
+            font-size: 64px;
+        }
+    }
+
+    &__desc {
+        text-align: center;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 38px;
+        color: $white;
+
+        @include lg {
+            font-size: 20px;
+        }        
+
+        @include md {
+            br {
+                display: none;
+            }
+        }
+    }
+}

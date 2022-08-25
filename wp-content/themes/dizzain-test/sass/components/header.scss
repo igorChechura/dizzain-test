@@ -1,0 +1,24 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 50px;
+
+    @include lg {
+        padding-top: 32px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        max-width: 160px;
+
+        @include lg {
+            max-width: 136px;
+        }
+    }
+}
