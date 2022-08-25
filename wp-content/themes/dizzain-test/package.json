@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "imask": "^6.2.2",
+    "swiper": "^8.3.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
     "whatwg-fetch": "^3.6.2"
