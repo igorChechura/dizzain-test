@@ -1,0 +1,20 @@
+.portfolio {
+    padding: 120px 0;
+
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 126%;
+        text-align: center;
+        color: $black;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 152%;        
+        text-align: center;
+        color: #4D4D4D;
+    }
+}

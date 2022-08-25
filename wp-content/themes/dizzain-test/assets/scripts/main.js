@@ -86,13 +86,37 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./js/about.js":
+/*!*********************!*\
+  !*** ./js/about.js ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var items = document.querySelectorAll('.about__item');
+var titles = document.querySelectorAll('.about__item-title');
+titles.forEach(function (title) {
+  title.addEventListener('click', function () {
+    items.forEach(function (item) {
+      item.classList.remove('about__item--active');
+    });
+    title.closest('.about__item').classList.add('about__item--active');
+  });
+});
+
+/***/ }),
+
 /***/ "./js/main.js":
 /*!********************!*\
   !*** ./js/main.js ***!
   \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about */ "./js/about.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_about__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),

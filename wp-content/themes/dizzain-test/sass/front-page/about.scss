@@ -1,0 +1,124 @@
+.about {
+    padding: 120px 0;
+    background-color: $black;    
+
+    @include lg {
+        padding: 50px 0;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: 90px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 46px;
+        color: $white;
+
+        @include lg {
+            margin-bottom: 40px;
+            font-size: 30px;
+            line-height: 40;
+        }
+
+        @include md {
+            font-size: 26px;
+            line-height: 33px;
+            text-align: left;
+        }
+    }
+
+    &__item {
+        @include md {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item-title {
+        width: 481px;
+        color: $black;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 80px;
+        text-shadow: #b7b7b7 1px 1px 0, #b7b7b7 -1px -1px 0, #b7b7b7 1px -1px 0, #b7b7b7 -1px 1px 0, #b7b7b7 1px 1px 0;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        @include lg {
+            width: 430px;
+            font-size: 40px;
+            line-height: 70px;
+        }
+
+        @include md {
+            width: 100%;
+            position: relative;
+            font-size: 30px;
+            line-height: 38px;
+            color: #4D4D4D;
+            text-shadow: none;
+
+            &::after {
+                content: "";
+                // display: inline-block;
+                width: 14px;
+                height: 15px;
+                margin-left: 15px;
+                position: absolute;
+                top: calc(50% - 7px);
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9199 0.796875L12.3633 0.210938C12.2168 0.0644531 11.9824 0.0644531 11.8652 0.210938L6.5625 5.51367L1.23047 0.210938C1.11328 0.0644531 0.878906 0.0644531 0.732422 0.210938L0.175781 0.796875C0.0292969 0.914062 0.0292969 1.14844 0.175781 1.29492L6.29883 7.41797C6.44531 7.56445 6.65039 7.56445 6.79688 7.41797L12.9199 1.29492C13.0664 1.14844 13.0664 0.914062 12.9199 0.796875Z' fill='%234D4D4D'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__item--active &__item-title {
+        color: $white;
+        text-shadow: none;
+
+        @include md {
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.175781 7.42188L0.732422 8.00781C0.878906 8.125 1.11328 8.125 1.23047 8.00781L6.5625 2.70508L11.8652 8.00781C11.9824 8.125 12.2168 8.125 12.3633 8.00781L12.9199 7.42188C13.0664 7.27539 13.0664 7.07031 12.9199 6.92383L6.79688 0.771484C6.65039 0.654297 6.44531 0.654297 6.29883 0.771484L0.175781 6.92383C0.0292969 7.07031 0.0292969 7.27539 0.175781 7.42188Z' fill='white'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    &__item-content {
+        position: absolute;
+        left: 600px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-left: 20px;
+        color: $white;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 46px;
+        overflow-y: auto;
+        display: none;
+
+        @include lg {
+            left: 500px;
+            font-size: 18px;
+            line-height: 34px;
+        }
+
+        @include md {
+            position: static;
+            margin-top: 33px;
+        }
+    }
+
+    &__item--active &__item-content {
+        display: block;
+    }
+}
